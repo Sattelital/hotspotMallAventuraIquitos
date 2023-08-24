@@ -1,0 +1,522 @@
+@font-face {
+  font-family: MontBlack;
+  src: url("../resources/fonts/Mont-Black.otf");
+}
+@font-face {
+  font-family: MontHeavy;
+  src: url("../resources/fonts/Mont-Heavy.otf");
+}
+@font-face {
+  font-family: MontBold;
+  src: url("../resources/fonts/Mont-Bold.otf");
+}
+@font-face {
+  font-family: MontSemiBold;
+  src: url("../resources/fonts/Mont-SemiBold.otf");
+}
+@font-face {
+  font-family: MontRegular;
+  src: url("../resources/fonts/Mont-Regular.otf");
+}
+@font-face {
+  font-family: MontBook;
+  src: url("../resources/fonts/Mont-Book.otf");
+}
+@font-face {
+  font-family: MontLight;
+  src: url("../resources/fonts/Mont-Light.otf");
+}
+.inv {
+  display: none !important;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  font-size: 10px;
+}
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 9px;
+  }
+}
+@media only screen and (max-width: 54em) {
+  html {
+    font-size: 8px;
+  }
+}
+@media only screen and (max-width: 42em) {
+  html {
+    font-size: 10px;
+  }
+}
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+}
+
+body {
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  height: 100%;
+  width: 100vw;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 62em) {
+  main {
+    width: 100%;
+  }
+}
+
+.loaderContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+.loaderContainer .loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #0075FF;
+  border-radius: 50%;
+  width: 220px;
+  height: 220px;
+  animation: spin 2s linear infinite;
+  top: 50%;
+}
+.loaderContainer img {
+  position: absolute;
+}
+
+.termModal {
+  background-color: #fff;
+  border-radius: 1rem;
+  position: absolute;
+  z-index: 10;
+  width: 90%;
+  height: 90%;
+  padding: 0.5rem 1rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 1.3rem;
+  line-height: 2rem;
+}
+.termModal button {
+  margin: 1rem 0;
+  background-color: rgba(0, 117, 255, 0.9);
+  color: #fff;
+  font-family: "MontBold", sans-serif;
+  border: none;
+  padding: 0.4rem 1rem;
+  font-size: 1.4rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.termModal p {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  text-align: justify;
+}
+.termModal p b {
+  text-align: justify;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  max-width: 120rem;
+}
+.container .structure {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 28em);
+  grid-column-gap: 0px;
+  grid-row-gap: 3rem;
+  width: 100%;
+}
+@media only screen and (max-width: 62em) {
+  .container .structure {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 24rem);
+  }
+}
+@media only screen and (max-width: 54em) {
+  .container .structure {
+    grid-template-columns: 1fr;
+    grid-template-rows: 10rem 38rem 10rem;
+  }
+}
+
+.ad {
+  grid-area: 1/1/2/3;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0rem 0rem 0rem;
+}
+@media only screen and (max-width: 62em) {
+  .ad {
+    grid-area: 1/1/2/2;
+  }
+}
+.ad .data {
+  width: 500px;
+}
+.ad .data .text h1 {
+  font-family: "MontHeavy", sans-serif;
+  font-size: 3.6rem;
+  color: white;
+  text-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
+  display: none;
+}
+@media only screen and (max-width: 75em) {
+  .ad .data .text h1 {
+    font-size: 3.4rem;
+  }
+}
+@media only screen and (max-width: 62em) {
+  .ad .data .text h1 {
+    font-size: 3.4rem;
+  }
+}
+@media only screen and (max-width: 54em) {
+  .ad .data .text h1 {
+    font-size: 3.4rem;
+  }
+}
+@media only screen and (max-width: 48em) {
+  .ad .data .text h1 {
+    font-size: 3.2rem;
+  }
+}
+@media only screen and (max-width: 42em) {
+  .ad .data .text h1 {
+    font-size: 3.2rem;
+    display: block;
+    text-align: center;
+  }
+}
+.ad .data .text h1 span {
+  font-weight: 300;
+  color: #33e9d0;
+  font-family: "MontHeavy", sans-serif;
+}
+.ad .data .text .textContainer {
+  width: 45rem;
+}
+.ad .data .text .textContainer img {
+  width: 100%;
+}
+@media only screen and (max-width: 42em) {
+  .ad .data .text .textContainer {
+    display: none;
+  }
+}
+.ad .data .logoContainer {
+  margin: 0 auto;
+  width: 46rem;
+  height: 13rem;
+  background: url("../resources/img/logoblue.svg") center center no-repeat;
+  background-size: contain;
+  animation: parpadeo 1s;
+  animation-delay: 3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 75em) {
+  .ad .data .logoContainer {
+    height: 10rem;
+  }
+}
+@media only screen and (max-width: 62em) {
+  .ad .data .logoContainer {
+    height: 9rem;
+  }
+}
+@media only screen and (max-width: 54em) {
+  .ad .data .logoContainer {
+    height: 8rem;
+  }
+}
+@media only screen and (max-width: 48em) {
+  .ad .data .logoContainer {
+    height: 8rem;
+  }
+}
+@media only screen and (max-width: 42em) {
+  .ad .data .logoContainer {
+    display: none;
+  }
+}
+@keyframes parpadeo {
+  0% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.packages {
+  grid-area: 2/1/3/3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 0.5rem;
+  padding: 0 0 0 0.2rem;
+}
+@media only screen and (max-width: 62em) {
+  .packages {
+    grid-area: 2/1/3/2;
+  }
+}
+@media only screen and (max-width: 48em) {
+  .packages {
+    grid-area: 3/1/5/3;
+  }
+}
+@media only screen and (max-width: 54em) {
+  .packages {
+    grid-area: 4/1/5/3;
+  }
+}
+.packages .prom {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.packages .prom img {
+  height: 16rem;
+  object-fit: contain;
+}
+@media only screen and (max-width: 62em) {
+  .packages .prom img {
+    height: 12rem;
+  }
+}
+
+.forms {
+  grid-area: 1/3/3/4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0075FF;
+  border-radius: 3rem 0 3rem 0;
+}
+@media only screen and (max-width: 62em) {
+  .forms {
+    grid-area: 1/2/3/3;
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 48em) {
+  .forms {
+    grid-area: 1/3/5/5;
+  }
+}
+@media only screen and (max-width: 54em) {
+  .forms {
+    grid-area: 2/1/4/3;
+    margin: 1rem auto;
+    width: 70%;
+    min-width: 250px;
+  }
+}
+.forms .freeInternetContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.forms .freeInternetContainer .header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.forms .freeInternetContainer .header h3 {
+  text-align: center;
+  padding: 1rem 2rem;
+  font-size: 1.8rem;
+  font-family: "MontRegular", sans-serif;
+  color: #fff;
+}
+@media only screen and (max-width: 42em) {
+  .forms .freeInternetContainer .header h3 {
+    font-size: 1.4rem;
+  }
+}
+.forms .freeInternetContainer .header h4 {
+  text-align: center;
+  padding: 1rem 7.5rem;
+  font-size: 1.2rem;
+  font-family: "MontLight", sans-serif;
+  font-weight: 100;
+  color: #fff;
+}
+@media only screen and (max-width: 42em) {
+  .forms .freeInternetContainer .header h4 {
+    font-size: 1.1rem;
+  }
+}
+.forms .freeInternetContainer .formFreeInternet {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.forms .freeInternetContainer .formFreeInternet label {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.forms .freeInternetContainer .formFreeInternet label input {
+  width: 70%;
+  border: none;
+  color: #0075FF;
+  -webkit-text-fill-color: #0075FF;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  outline: none;
+  font-family: "MontSemiBold", sans-serif;
+}
+.forms .freeInternetContainer .formFreeInternet label input::placeholder {
+  color: #0075FF;
+}
+@media only screen and (max-width: 75em) {
+  .forms .freeInternetContainer .formFreeInternet label input {
+    font-size: 1.2rem;
+  }
+}
+.forms .freeInternetContainer .formFreeInternet #chkTerminos {
+  width: 70%;
+  font-size: 0.9rem;
+  text-align: justify;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "MontLight", sans-serif;
+  color: #fff;
+  user-select: none;
+  cursor: pointer;
+}
+.forms .freeInternetContainer .formFreeInternet #chkTerminos #cbox1 {
+  align-self: flex-start;
+  width: auto;
+}
+.forms .freeInternetContainer .formFreeInternet #chkTerminos span {
+  font-weight: 900;
+  font-family: "MontSemiBold", sans-serif;
+}
+.forms .freeInternetContainer .formFreeInternet .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+}
+.forms .freeInternetContainer .formFreeInternet .buttons a,
+.forms .freeInternetContainer .formFreeInternet .buttons button {
+  color: #0075FF;
+  border: none;
+  width: 70%;
+  height: 3rem;
+  text-align: center;
+  padding: 2rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  font-family: "MontSemiBold", sans-serif;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 75em) {
+  .forms .freeInternetContainer .formFreeInternet .buttons a,
+  .forms .freeInternetContainer .formFreeInternet .buttons button {
+    font-size: 1.2em;
+  }
+}
+@media only screen and (max-width: 62em) {
+  .forms .freeInternetContainer .formFreeInternet .buttons a,
+  .forms .freeInternetContainer .formFreeInternet .buttons button {
+    font-size: 1.1rem;
+  }
+}
+@media only screen and (max-width: 54em) {
+  .forms .freeInternetContainer .formFreeInternet .buttons a,
+  .forms .freeInternetContainer .formFreeInternet .buttons button {
+    font-size: 1rem;
+  }
+}
+.forms .freeInternetContainer .formFreeInternet .buttons a {
+  background-color: #0075FF;
+}
+.forms .freeInternetContainer .formFreeInternet .buttons button {
+  background-color: #33e9d0;
+}
+.forms .freeInternetContainer .formFreeInternet .buttons #back {
+  background-color: red;
+}
+
+/*# sourceMappingURL=style.css.map */

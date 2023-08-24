@@ -1,0 +1,169 @@
+.forms {
+    grid-area: 1 / 3 / 3 / 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color3;
+    border-radius: 3rem 0 3rem 0;
+
+    @media only screen and (max-width: $bp-xlarge) {
+        grid-area: 1 / 2 / 3 / 3;
+        width: 60%;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-area: 1 / 3 / 5 / 5;
+    }
+
+    @media only screen and (max-width: $bp-large) {
+        grid-area: 2 / 1 / 4 / 3;
+        margin: 1rem auto;
+        width: 70%;
+        min-width: 250px;
+    }
+
+    .freeInternetContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        .header {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            h3 {
+                text-align: center;
+                padding: 1rem 2rem;
+                font-size: 1.8rem;
+                font-family: $font3;
+                color: $color0;
+
+                @media only screen and (max-width: $bp-small) {
+                    font-size: 1.4rem;
+                }
+            }
+
+            h4 {
+                text-align: center;
+                padding: 1rem 7.5rem;
+                font-size: 1.2rem;
+                font-family: $font1;
+                font-weight: 100;
+                color: $color0;
+
+                @media only screen and (max-width: $bp-small) {
+                    font-size: 1.1rem;
+                }
+            }
+        }
+
+        .formFreeInternet {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+
+            label {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+
+                input {
+                    width: 70%;
+                    border: none;
+                    color: $color3;
+                    -webkit-text-fill-color: $color3;
+                    padding: 1rem;
+                    border-radius: .5rem;
+                    outline: none;
+                    font-family: $font4;
+
+                    &::placeholder {
+                        // opacity: 0.5;
+                        color: $color3
+                    }
+
+                    @media only screen and (max-width: $bp-xxlarge) {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+
+            #chkTerminos {
+                width: 70%;
+                font-size: .9rem;
+                text-align: justify;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: .5rem;
+                font-family: $font1;
+                color: $color0;
+                user-select: none;
+                cursor: pointer;
+
+                #cbox1 {
+                    align-self: flex-start;
+                    width: auto;
+                }
+
+                span {
+                    font-weight: 900;
+                    font-family: $font4;
+                }
+            }
+
+            .buttons {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                gap: 1rem;
+
+                a,
+                button {
+                    color: $color3;
+                    border: none;
+                    width: 70%;
+                    height: 3rem;
+                    text-align: center;
+                    padding: 2rem 1rem;
+                    border-radius: .5rem;
+                    font-size: 1.2rem;
+                    font-family: $font4;
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    @media only screen and (max-width: $bp-xxlarge) {
+                        font-size: 1.2em;
+                    }
+
+                    @media only screen and (max-width: $bp-xlarge) {
+                        font-size: 1.1rem;
+                    }
+
+                    @media only screen and (max-width: $bp-large) {
+                        font-size: 1rem;
+                    }
+                }
+
+                a {
+                    background-color: $color3;
+                }
+
+                button {
+                    background-color: $color1;
+                }
+
+                #back {
+                    background-color: red;
+                }
+            }
+        }
+    }
+}

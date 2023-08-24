@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./resources/img/favicon.png">
+    <title>Global Hotspot - Login</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <form name="sendin" action="$(link-login-only)" method="post">
+        <input type="hidden" name="username" />
+        <input type="hidden" name="password" />
+        <input type="hidden" name="dst" value="$(link-orig)" />
+        <input type="hidden" name="popup" value="true" />
+    </form>
+    <script type="text/javascript" src="/md5.js"></script>
+    <script type="text/javascript">
+        function doLogin() {
+            document.sendin.username.value = document.login.pin.value;
+            document.sendin.password.value = hexMD5('$(chap-id)' + document.login.pin.value + '$(chap-challenge)');
+            document.sendin.submit();
+            return false;
+        }
+    </script>
+    <main>
+
+        <div class="loaderContainer">
+            <div class="loader">
+            </div>
+            <img src="./resources/img/iconwhite.svg" alt="">
+        </div>
+        <div class="termModal inv">
+            <button id="closeModal">X</button>
+            <p>
+                <b>TÉRMINOS DE USO Y POLÍTICA DE PRIVACIDAD
+                    POLÍTICA DE PRIVACIDAD de Global Fiber Perú S.A.C. (en adelante, “GLOBAL”) identificada con
+                    RUC
+                    20518777646 y con domicilio en Av. 28 de julio Nro. 757, Int. 1002, Urb. Leuro, Miraflores, Lima; es
+                    una
+                    empresa de telecomunicaciones que brinda servicios en redes fijas, de banda ancha, así como una
+                    variada
+                    oferta de servicios digitales.</b>
+                <br>
+                <br>
+                <br>
+                <b>1. Finalidades del tratamiento</b><br>
+                A través de la presente Política de Privacidad GLOBAL informa que los datos personales del
+                titular, tales como: nombres y apellidos, voz, número de documento de identidad, lugar y fecha de
+                nacimiento, domicilio, correo electrónico, números de teléfonos y huella digital que brinden según
+                corresponda al momento de contratar un producto o servicio, así como otros que puedan obtenerse de forma
+                legítima por GLOBAL son necesarios para la ejecución de la inscripción; y los mismos serán
+                almacenados en el Banco de Datos de GLOBAL.
+                Los principios y disposiciones contenidos en la presente Política se aplicarán a todo tratamiento de
+                datos personales por parte de GLOBAL, sus empleados y sus proveedores encargados, a quienes se
+                exigirá un nivel de diligencia y cumplimiento equivalente al que aplica GLOBAL.
+                Asimismo, en caso medie el consentimiento previo, expreso e informado del titular, GLOBAL podrá
+                remitirle ofertas comerciales distintas a su inscripción, así como otras de socios comerciales.
+                <br>
+                <br>
+                <br>
+                <b>2. Principios del tratamiento</b><br>
+                Los datos personales del titular serán tratados de conformidad con los principios de legalidad,
+                consentimiento, limitación de la finalidad, proporcionalidad, calidad y seguridad, así como con el resto
+                de obligaciones y garantías establecidas en la Ley 29733 – Ley de Protección de Datos Personales y su
+                Reglamento.<br><br>
+                <b>&emsp;i.</b>De acuerdo al principio de legalidad, GLOBAL no realiza recopilación de datos personales
+                por
+                medios fraudulentos, desleales o ilícitos.<br><br>
+                <b>&emsp;ii.</b>El tratamiento de datos personales se realizará siempre amparado en el consentimiento
+                del
+                titular,
+                excluyendo las excepciones dispuestas por ley.<br><br>
+                <b>&emsp;iii.</b>Los datos personales se recopilarán para una finalidad determinada, explícita y lícita,
+                y no
+                se
+                extenderá a otra distinta a la establecida de manera inequívoca al momento de su recopilación,
+                excluyendo casos de actividades de valor histórico o estadístico que incluyan procedimientos de
+                disociación o anonimización.<br><br>
+                <b>&emsp;iv.</b>Todo tratamiento de datos personales será adecuado, relevante y no excesivo a la
+                finalidad
+                para la
+                que estos hubiesen sido recopilados.<br><br>
+                <b>&emsp;v.</b>Los datos personales serán veraces y exactos, implementándose, en la medida de lo
+                posible,
+                procedimientos de actualización.<br><br>
+                <b>&emsp;vi.</b>Los datos personales se conservarán el tiempo necesario para cumplir con la finalidad
+                del
+                tratamiento, salvo disposiciones de almacenamiento posterior conforme a ley o autorización expresa del
+                titular.<br><br>
+                <b>&emsp;vii.</b>GLOBAL y sus encargados de tratamiento, adoptarán las medidas técnicas, organizativas
+                y
+                legales necesarias que garanticen la seguridad de los datos personales del titular.
+                <br><br>
+                <br><br>
+                <b>3. Medidas de Seguridad.</b><br>
+                GLOBAL toma muy en serio la protección de los datos personales del titular. Esta información se
+                conservará de forma segura y se tratará con la máxima diligencia, garantizando su confidencialidad y
+                empleando estándares de calidad según normas vigentes. Todo proceso de contratación o que implique la
+                introducción de datos personales serán siempre transmitidos mediante protocolo de comunicación segura.
+                <br>
+                <br>
+                <br>
+                <b>4. Información que compartimos</b>
+                GLOBAL únicamente intercambiará datos personales con terceros destinatarios, para cualquiera de
+                las finalidades previstas en su Política de Privacidad, con el objetivo de mantener la relación
+                contractual, realizar las comunicaciones a los sistemas de información crediticia, así como las que sean
+                legalmente exigibles en cumplimiento de cualquier normativa que resulte de aplicación en los términos
+                expuestos a continuación:<br><br>
+                <b>&emsp;a.</b>Necesaria para la prestación del servicio:
+                GLOBAL tiene contratados para la gestión de algunas de las funciones necesarias para la prestación
+                del servicio, proveedores de confianza que podrán –según corresponda- tener acceso a los datos
+                personales del titular, actuando como encargados de tratamiento y que estarán obligados a cumplir con
+                sus obligaciones legales de encargado de tratamiento, a mantener la confidencialidad y secreto de la
+                información. GLOBAL suscribe con aquellos un contrato o cláusula de acceso a datos en virtud de la
+                que se comprometan a dar cumplimiento a las mismas obligaciones establecidas en el presente documento y
+                a las exigidas por la normativa aplicable. El titular podrá conocer la relación actualizada de dichos
+                proveedores aquí.
+                En ningún caso los datos personales del titular o usuario serán compartidos con terceras empresas sin
+                obtener su consentimiento previo, salvo que la comunicación de sus datos fuese necesaria para asegurar
+                el mantenimiento de la relación contractual con el titular, así como en los casos previstos por la
+                normativa vigente.
+                Asimismo, dada la configuración de la oferta comercial de GLOBAL y en función de las necesidades
+                técnicas para la prestación de los servicios que forman parte de la misma, se podrán producir las
+                comunicaciones de datos que sean necesarias, entre los corresponsables del tratamiento, con el fin de
+                prestar y gestionar correctamente el servicio contratado, ofrecer la oferta comercial que más se adapte
+                a las circunstancias del titular (por ejemplo, en caso de tener limitaciones de cobertura que impliquen
+                una solución alternativa), así como a sus intereses y preferencias.
+                Adicionalmente, se informa de que podrán ser comunicados los datos personales que sean necesarios para
+                la prestación, facturación y cobro de servicios de terceros contratados por el titular a través de los
+                Productos y Servicios GLOBAL, como, por ejemplo, otras operadoras de telecomunicaciones,
+                proveedores de servicios de tarificación adicional, así como el resto de proveedores que, en su caso, se
+                indiquen en las Condiciones de los Productos o Servicios.<br><br>
+                <b>&emsp;b.</b>Comunicaciones de datos a sistemas de información crediticia: El titular es informado de
+                que,
+                conforme a la normativa vigente, en supuestos de impago, los datos relativos a la deuda podrán ser
+                comunicados a terceras empresas debidamente autorizadas legalmente y encargadas de gestionar el
+                incumplimiento de obligaciones dinerarias.<br><br>
+                <b>&emsp;c.</b>Cumplimiento de una obligación legal GLOBAL podrá comunicar a terceros debidamente
+                habilitados
+                legalmente, su información personal cuando sea necesario para cumplir con la legislación. De igual
+                manera, podrá comunicar los datos personales del titular a las distintas autoridades públicas en virtud
+                de una obligación legal, como autoridades fiscales, judiciales, administrativas y cualquier otra que en
+                función de la normativa vigente resulte aplicable.
+                <br>
+                <br>
+                <br>
+                <b>5. Transferencia de Datos Personales</b><br>
+                GLOBAL únicamente transferirá datos del titular a terceros si media consentimiento expreso e
+                informado para ello, el cual será recabado individualmente para cada una de las transferencias. No se
+                considerará transferencia de datos personales a estos efectos, los accesos a datos personales realizados
+                por proveedores encargados por GLOBAL para asegurar la ejecución del servicio contratado.
+                <br>
+                <br>
+                <br>
+                <b>6. Calidad y Plazo de conservación de los Datos Personales</b><br>
+                Los datos personales solicitados serán adecuados, pertinentes y no excesivos en relación con la
+                finalidad para los que se recogen. El titular garantiza que los datos personales facilitados son veraces
+                y se hace responsable de comunicar a GLOBAL cualquier modificación de los mismos. GLOBAL
+                hará los mejores esfuerzos para mantener su Banco de Datos actualizado, pero será responsabilidad del
+                titular informar a GLOBAL de las modificaciones que a futuro se produzcan en sus datos personales.
+                El titular responderá, en cualquier caso, de la veracidad de los datos facilitados, reservándose GLOBAL
+                FIBER el derecho a excluir de los servicios registrados a todo aquel que haya facilitado datos falsos,
+                sin perjuicio de las demás acciones que procedan. Los datos personales serán tratados hasta que sea
+                necesario para cumplir con las finalidades asociadas a su recopilación. Una vez cumplida dicha
+                finalidad, se podrán conservar hasta por el plazo de diez (10) años una vez finalizada la relación
+                contractual para cumplir obligaciones legales, y/o hasta que el titular solicite su cancelación.
+                <br>
+                <br>
+                <br>
+                <b>7. Tratamiento de Datos Sensibles y de Menores de Edad.</b><br>
+                GLOBAL no recoge datos de menores de edad. Podrá utilizar datos personales de menores de edad con
+                el previo consentimiento de sus padres, tutores o representantes legales. Si algún menor de edad ingresa
+                sus datos personales a través del sitio web de GLOBAL o una aplicación, deberá solicitar el
+                permiso a sus padres, tutores o representantes legales, quienes serán responsables de todos los actos
+                realizados por los menores a su cargo.
+                <br>
+                <br>
+                <br>
+                <b>8. Ejercicio de los Derechos de Acceso, Rectificación Supresión y Oposición.</b><br>
+                El titular de los datos personales tiene un conjunto de derechos que le garantizan el control sobre los
+                mismos:<br><br>
+                <b>&emsp;i.</b>Derecho de acceso. Derecho a obtener información sobre los datos personales de sí mismo
+                que son
+                objeto de tratamiento por parte de GLOBAL.<br><br>
+                <b>&emsp;ii.</b>Derecho de rectificación. Derecho a solicitar a GLOBAL la corrección de los datos
+                personales
+                objeto de tratamiento, ya sea por inexactitud u omisión. Incorpora el derecho de actualización e
+                inclusión.<br><br>
+                <b>&emsp;iii.</b>Derecho de supresión o cancelación. Derecho a solicitar la eliminación de sus datos
+                personales,
+                anulando el tratamiento de los mismos. La solicitud de cancelación podrá referirse a todos los datos
+                personales del titular contenidos en un banco de datos personales o sólo a alguna parte de
+                ellos.<br><br>
+                <b>&emsp;iv.</b>Derecho de oposición. Derecho a oponerse al tratamiento de sus datos personales para
+                finalidades
+                concretas atendiendo a motivos fundados y legítimos relativos a una concreta situación personal.
+                Para ejercer sus derechos ARCO, el titular cuenta con dos canales de atención:
+                • Vía correo electrónico a arealegal@globalfiber.com.pe, adjuntando el formato ARCO, su documento de
+                identidad, especificando el tipo de solicitud y sus motivos. De requerir información adicional, se le
+                comunicará oportunamente por el mismo medio.
+                • En nuestros Centros de Atención al titular. El tiempo de respuesta para las solicitudes de derecho de
+                Rectificación, Cancelación y Oposición es de 10 días hábiles. Por su parte, la solicitud de Acceso tiene
+                un plazo de respuesta de 20 días hábiles.
+                <br>
+                <br>
+                <br>
+                <b>9. Uso de Cookies</b><br>
+                La web GLOBAL utiliza cookies, pequeños archivos almacenados en las computadoras que permiten
+                recordar características o preferencias de la navegación en nuestro sitio Web, y personalizar las
+                futuras visitas del titular. Asimismo, hacen más segura la navegación y permiten ofrecer información de
+                acuerdo al interés del titular. El usuario que navega en la web de GLOBAL puede aceptar o rechazar
+                la instalación de cookies o suprimirlos una vez que haya finalizado su navegación. GLOBAL no se
+                responsabiliza que por la desactivación de las cookies se pueda impedir el buen funcionamiento de
+                nuestra web.
+                <br>
+                <br>
+                <br>
+                <b>10. Tráfico IP</b><br>
+                GLOBAL no almacena información de las IP’s asignadas a los usuarios que visitan nuestros portales
+                web. En ese sentido, en nuestros bancos de datos no se recoge información alguna respecto a las IP,
+                estáticas o dinámicas, que nuestros usuarios hayan utilizado en cualquiera de sus navegaciones.
+                <br>
+                <br>
+                <br>
+                <b>11. Anonimización de datos personales</b><br>
+                En el proceso de anonimización, los datos de carácter personal son sustituidos por identificadores
+                únicos irreversibles, de tal manera que no es posible su reversión. Con estos datos anónimos, GLOBAL
+                FIBER realiza Proyectos Big Data en los que conjuntos de datos o combinaciones de conjuntos de datos de
+                gran volumen y complejidad, son procesados mediante tecnologías y herramientas que permiten obtener
+                resultados estadísticos de utilidad. Por otro lado, los datos se analizan con el objetivo de obtener
+                resultados, siempre de manera agregada, con el fin de identificar comportamientos de carácter general y
+                nunca de carácter individual. Una vez agregados, los datos son extrapolados estadísticamente para
+                realizar una estimación sobre el número total de personas, para no tener en cuenta solo aquellos que
+                están conectados la red de GLOBAL. Por todo lo anterior, dado que los datos están anonimizados,
+                agregados y extrapolados, es totalmente imposible identificar de manera individual a las personas que
+                generaron dichos datos.
+                <br>
+                <br>
+                <br>
+                <b>12. Cambios</b><br>
+                GLOBAL se reserva el derecho de modificar y/o actualizar la presente Política de Privacidad como
+                parte de su mejora continua, ya sea para adaptarla a futuros cambios normativos, brindar una mejor
+                calidad de servicio o comunicar nuevas alternativas relacionadas a la presente. En caso existan
+                modificaciones sustanciales serán informados vía sms o correo electrónico. Por esta razón, pedimos
+                revisar de forma regular esta Política para conocer la versión más reciente.
+
+            </p>
+        </div>
+        <div class="container">
+            <div class="structure">
+                <section class="ad">
+                    <div class="data">
+                        <div class="text">
+                            <h1>Siente la velocidad <br> de la <span>fibra óptica</span></h1>
+                        </div>
+                        <div class="logoContainer">
+                        </div>
+                    </div>
+                    <!-- <div class="imgContainer">
+                    </div> -->
+                </section>
+                <section class="packages">
+                    <div class="icon">
+                    </div>
+                    <div class="prom">
+                        <img src="./resources/img/internetPorFibraOptica.svg" alt="">
+                    </div>
+                </section>
+                <section class="forms">
+                    <div class="freeInternetContainer">
+                        <div class="header">
+                            <h3>¡Bienvenido a la red Global!</h3>
+                            <h4>Prepárate para una experiencia inigualable de velocidad y conexión por fibra óptica.
+                                Navega sin límites con Global.</h4>
+                        </div>
+                        <form class="formFreeInternet" name="free">
+                            <label for="dni">
+                                <input type="text" pattern="\d{8,}" name="dni" id="dni" maxlength=8 placeholder="DNI"
+                                    required
+                                    oninvalid="this.setCustomValidity('Por favor, completa tu DNI correctamente.')"
+                                    oninput="this.setCustomValidity('')">
+                            </label>
+                            <label for="phone">
+                                <input type="tel" name="phone" id="phone" placeholder="Celular" required>
+                            </label>
+                            <label for="email">
+                                <input type="email" name="email" id="email" placeholder="Correo Electrónico" required>
+                            </label>
+                            <label id="chkTerminos">
+                                <input type="checkbox" id="cbox1" name="chkTerminos" value="" required>
+                                <p>
+                                    He leído y acepto los <span id="showModal">Términos de Uso y Política de
+                                        Privacidad</span>. Autorizo el tratamiento de mis datos para recibir
+                                    promociones, ofertas y noticias exclusivas de GLOBAL y sus vinculadas
+                                </p>
+                            </label>
+
+                            <div class="buttons">
+                                <button class="ingresarFree"
+                                    url="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)"
+                                    type="submit">Ingresar</button>
+                                <!-- <a style="display: none;" type="button" class="buttlink"
+                                    href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)">Ingresar
+                                </a> -->
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <script src="./js/loader.js"></script>
+    <script src="./js/functions.js"></script>
+</body>
+
+</html>

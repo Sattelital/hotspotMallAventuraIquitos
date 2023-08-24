@@ -1,0 +1,27 @@
+// 1200px / 16 = 75em
+// 992px / 16 = 62em
+// 864px / 16 = 54em
+// 768px / 16 = 48em
+// 672px / 16 = 42em
+// 576px / 16 = 36em
+// 480px
+// 320px
+
+$bp-xxlarge: 75em;
+$bp-xlarge: 62em;
+$bp-large: 54em;
+$bp-medium: 48em;
+$bp-small: 42em;
+$bp-xsmall: 36em;
+
+
+$color0: #fff;
+$color1: #33e9d0;
+$color2: #fdd703;
+$color3: #0075FF;
+$color4: #0773a7;
+$color5: #000;
+
+.inv {
+    display: none !important;
+}
