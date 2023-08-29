@@ -9,18 +9,6 @@
 
 html {
     font-size: 10px;
-
-    @media only screen and (max-width: $bp-xxlarge) {
-        font-size: 9px;
-    }
-
-    @media only screen and (max-width: $bp-large) {
-        font-size: 8px;
-    }
-
-    @media only screen and (max-width: $bp-small) {
-        font-size: 10px;
-    }
 }
 
 a,
@@ -38,7 +26,6 @@ img {
 }
 
 body {
-    // background: black url('../resources/img/nuevoBG.png') center center no-repeat;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -53,10 +40,6 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    @media only screen and (max-width: $bp-xlarge) {
-        width: 100%;
-    }
 }
 
 .loaderContainer {
@@ -148,26 +131,17 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 90%;
-    max-width: 120rem;
+    width: 100%;
+    max-width: 140rem;
 
     .structure {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 28em);
-        grid-column-gap: 0px;
-        grid-row-gap: 3rem;
-        width: 100%;
-        // background-color: red;
-
-        @media only screen and (max-width: $bp-xlarge) {
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(2, 24rem);
-        }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
 
         @media only screen and (max-width: $bp-large) {
-            grid-template-columns: 1fr;
-            grid-template-rows: 10rem 38rem 10rem;
+            flex-direction: column;
         }
     }
 }
