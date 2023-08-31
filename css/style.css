@@ -38,6 +38,21 @@
 html {
   font-size: 10px;
 }
+@media only screen and (max-width: 54em) {
+  html {
+    font-size: 9px;
+  }
+}
+@media only screen and (max-width: 48em) {
+  html {
+    font-size: 8px;
+  }
+}
+@media only screen and (max-width: 30em) {
+  html {
+    font-size: 9px;
+  }
+}
 
 a,
 a:link,
@@ -56,11 +71,13 @@ img {
 body {
   background-size: cover;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   height: 100%;
   width: 100vw;
+  background-color: #0075FF;
 }
 
 main {
@@ -150,133 +167,114 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 90%;
 }
-@media only screen and (max-width: 54em) {
+@media only screen and (max-width: 30em) {
   .container .structure {
     flex-direction: column;
   }
 }
 
 .info {
-  width: 70%;
+  width: 65%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 8rem;
+  gap: 4rem;
 }
-@media only screen and (max-width: 75em) {
+@media only screen and (max-width: 54em) {
   .info {
     width: 60%;
   }
 }
-@media only screen and (max-width: 54em) {
+@media only screen and (max-width: 30em) {
   .info {
-    width: 70%;
-    min-width: 40rem;
-  }
-}
-@media only screen and (max-width: 42em) {
-  .info {
-    margin: 2rem 0;
-    min-width: 20rem;
-    width: 80%;
-  }
-}
-@media only screen and (max-width: 36em) {
-  .info {
-    margin: 1rem;
-    width: 96%;
-  }
-}
-.info .logoContainer {
-  width: 46rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-@media only screen and (max-width: 54em) {
-  .info .logoContainer {
-    margin: 3rem 0;
-    width: 100%;
-  }
-}
-@media only screen and (max-width: 48em) {
-  .info .logoContainer {
-    margin: 2rem 0 4rem 0;
     width: 90%;
   }
 }
-@media only screen and (max-width: 42em) {
-  .info .logoContainer {
-    margin: -2rem 0 3rem 0;
-    width: 80%;
-  }
-}
-.info .adContainer {
-  width: 46rem;
+.info .logoContainer {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 3rem;
 }
-@media only screen and (max-width: 54em) {
-  .info .adContainer {
-    display: none;
+.info .logoContainer img {
+  width: 23rem;
+  object-fit: contain;
+}
+@media only screen and (max-width: 75em) {
+  .info .logoContainer img {
+    width: 20rem;
   }
 }
-.info img {
+@media only screen and (max-width: 54em) {
+  .info .logoContainer img {
+    width: 15rem;
+  }
+}
+@media only screen and (max-width: 30em) {
+  .info .logoContainer img {
+    width: 40%;
+  }
+}
+.info .logoContainer span {
+  font-size: 3rem;
+  color: #fff;
+  font-family: "MontSemiBold", sans-serif;
+}
+@media only screen and (max-width: 54em) {
+  .info .logoContainer span {
+    font-size: 2.4rem;
+  }
+}
+.info .text {
   width: 100%;
-  object-fit: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.info .text p {
+  font-size: 2.6rem;
+  font-family: "MontSemiBold", sans-serif;
+  color: #fff;
+  text-align: center;
+}
+@media only screen and (max-width: 54em) {
+  .info .text p {
+    font-size: 2.2rem;
+  }
+}
+.info .text p span {
+  font-family: "MontBold", sans-serif;
 }
 
 .forms {
-  width: 30%;
+  width: 35%;
   height: 100%;
-  max-height: 60rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #0075FF;
-  border-radius: 3rem 0 3rem 0;
-  padding: 8rem 0;
+  border-left: 3px solid #fff;
+  padding: 3rem;
 }
-@media only screen and (max-width: 75em) {
+@media only screen and (max-width: 54em) {
   .forms {
     width: 40%;
   }
 }
-@media only screen and (max-width: 54em) {
+@media only screen and (max-width: 30em) {
   .forms {
-    width: 70%;
-    min-width: 40rem;
-    padding: 2rem 0;
-  }
-}
-@media only screen and (max-width: 48em) {
-  .forms {
-    margin: 2rem 0 4rem 0;
     width: 90%;
-  }
-}
-@media only screen and (max-width: 42em) {
-  .forms {
-    margin: 2rem 0 4rem 0;
-    min-width: 20rem;
-    width: 80%;
-  }
-}
-@media only screen and (max-width: 36em) {
-  .forms {
-    margin: 1rem;
-    width: 96%;
+    border-left: none;
   }
 }
 .forms .freeInternetContainer {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 3rem;
 }
 .forms .freeInternetContainer .header {
   display: flex;
@@ -284,40 +282,11 @@ main {
   justify-content: center;
   align-items: center;
 }
-.forms .freeInternetContainer .header .adContainer {
-  width: 60%;
-  min-width: 20rem;
-  margin: 1rem;
-  display: none;
-}
-@media only screen and (max-width: 54em) {
-  .forms .freeInternetContainer .header .adContainer {
-    display: block;
-  }
-}
-.forms .freeInternetContainer .header .adContainer img {
-  width: 100%;
-  object-fit: contain;
-}
 .forms .freeInternetContainer .header h3 {
   text-align: center;
-  padding: 1rem 2rem;
-  font-size: 1.8rem;
-  font-family: "MontRegular", sans-serif;
+  font-size: 2rem;
+  font-family: "MontHeavy", sans-serif;
   color: #fff;
-}
-.forms .freeInternetContainer .header h4 {
-  text-align: center;
-  padding: 1rem 7.5rem;
-  font-size: 1.2rem;
-  font-family: "MontLight", sans-serif;
-  font-weight: 100;
-  color: #fff;
-}
-@media only screen and (max-width: 42em) {
-  .forms .freeInternetContainer .header h4 {
-    padding: 1rem 3.5rem;
-  }
 }
 .forms .freeInternetContainer .formFreeInternet {
   display: flex;
@@ -332,22 +301,27 @@ main {
   justify-content: center;
 }
 .forms .freeInternetContainer .formFreeInternet label input {
-  width: 70%;
+  width: 80%;
   border: none;
   color: #0075FF;
   -webkit-text-fill-color: #0075FF;
-  padding: 0.8rem;
+  padding: 1.4rem 1rem;
   border-radius: 0.5rem;
   outline: none;
   font-family: "MontSemiBold", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+}
+@media only screen and (max-width: 75em) {
+  .forms .freeInternetContainer .formFreeInternet label input {
+    width: 100%;
+  }
 }
 .forms .freeInternetContainer .formFreeInternet label input::placeholder {
   color: #0075FF;
 }
 .forms .freeInternetContainer .formFreeInternet #chkTerminos {
-  width: 70%;
-  font-size: 0.8rem;
+  width: 80%;
+  font-size: 1rem;
   text-align: justify;
   display: flex;
   justify-content: center;
@@ -357,6 +331,11 @@ main {
   color: #fff;
   user-select: none;
   cursor: pointer;
+}
+@media only screen and (max-width: 75em) {
+  .forms .freeInternetContainer .formFreeInternet #chkTerminos {
+    width: 100%;
+  }
 }
 .forms .freeInternetContainer .formFreeInternet #chkTerminos #cbox1 {
   align-self: flex-start;
@@ -377,23 +356,29 @@ main {
 .forms .freeInternetContainer .formFreeInternet .buttons button {
   color: #0075FF;
   border: none;
-  width: 70%;
+  width: 80%;
   height: 3rem;
   text-align: center;
   padding: 2rem 1rem;
   border-radius: 0.5rem;
-  font-size: 1.2rem;
-  font-family: "MontSemiBold", sans-serif;
+  font-size: 1.6rem;
+  font-family: "MontBold", sans-serif;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+@media only screen and (max-width: 75em) {
+  .forms .freeInternetContainer .formFreeInternet .buttons a,
+  .forms .freeInternetContainer .formFreeInternet .buttons button {
+    width: 100%;
+  }
+}
 .forms .freeInternetContainer .formFreeInternet .buttons a {
   background-color: #0075FF;
 }
 .forms .freeInternetContainer .formFreeInternet .buttons button {
-  background-color: #33e9d0;
+  background-color: #33EAD1;
 }
 .forms .freeInternetContainer .formFreeInternet .buttons #back {
   background-color: red;
