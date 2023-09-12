@@ -1,1 +1,76 @@
-const _0x38c9ee=_0x1921;(function(_0x227e71,_0x46d862){const _0x424278=_0x1921,_0x3c59df=_0x227e71();while(!![]){try{const _0x481721=parseInt(_0x424278(0x105))/0x1*(-parseInt(_0x424278(0x113))/0x2)+-parseInt(_0x424278(0x116))/0x3*(-parseInt(_0x424278(0xfd))/0x4)+parseInt(_0x424278(0xf5))/0x5+-parseInt(_0x424278(0x117))/0x6*(parseInt(_0x424278(0xfa))/0x7)+parseInt(_0x424278(0x110))/0x8+-parseInt(_0x424278(0xf9))/0x9+parseInt(_0x424278(0x107))/0xa;if(_0x481721===_0x46d862)break;else _0x3c59df['push'](_0x3c59df['shift']());}catch(_0x2dee99){_0x3c59df['push'](_0x3c59df['shift']());}}}(_0xc097,0x275d6));function _0x1921(_0x979b5f,_0x21f6a0){const _0xc0971c=_0xc097();return _0x1921=function(_0x19213d,_0x4b4296){_0x19213d=_0x19213d-0xf4;let _0x1d92ff=_0xc0971c[_0x19213d];return _0x1d92ff;},_0x1921(_0x979b5f,_0x21f6a0);}const buttonFreeInternet=document[_0x38c9ee(0xfc)](_0x38c9ee(0xf7)),buttonBack=document[_0x38c9ee(0xfc)](_0x38c9ee(0x106)),freeInternetContainer=document['querySelector']('.freeInternetContainer'),loginContainer=document[_0x38c9ee(0xfc)](_0x38c9ee(0xf4)),formFreeInternet=document[_0x38c9ee(0xfc)](_0x38c9ee(0xf6));function _0xc097(){const _0xdd11cd=['nombreApellido','style','inv','url','addEventListener','body','&data=','47imXxiN','#back','2487180lAJEFU','.ingresarFree','overflow','classList','toggle','email','get','#showModal','Mall\x20Aventura\x20-\x20Iquitos','123896blMjKk','phone','submit','3742cKYVpH','Maynas','getAttribute','108276KaeGQi','83466IdJbYe','click','Loreto','.loginContainer','68805VyxzQQ','.formFreeInternet','#freeInternet','hidden','533178eWWZkH','21bSuQqT','stringify','querySelector','8eUoFOg'];_0xc097=function(){return _0xdd11cd;};return _0xc097();}formFreeInternet['addEventListener'](_0x38c9ee(0x112),_0x2acdd1=>{const _0x3023cb=_0x38c9ee;_0x2acdd1['preventDefault']();const _0x354ab4=new FormData(formFreeInternet),_0x2cfc58={'name':_0x354ab4[_0x3023cb(0x10d)](_0x3023cb(0xfe)),'dni':_0x354ab4[_0x3023cb(0x10d)]('dni'),'phone':_0x354ab4[_0x3023cb(0x10d)](_0x3023cb(0x111)),'email':_0x354ab4[_0x3023cb(0x10d)](_0x3023cb(0x10c)),'address':_0x3023cb(0x10f),'region':_0x3023cb(0x119),'state':_0x3023cb(0x114),'district':'Iquitos','authorization':_0x354ab4[_0x3023cb(0x10d)]('chkDatos')==='true'};document[_0x3023cb(0x103)][_0x3023cb(0xff)][_0x3023cb(0x109)]=_0x3023cb(0xf8);const _0x503571=document[_0x3023cb(0xfc)](_0x3023cb(0x108))[_0x3023cb(0x115)](_0x3023cb(0x101))+_0x3023cb(0x104)+JSON[_0x3023cb(0xfb)](_0x2cfc58);location['href']=_0x503571;});const buttonShowModal=document[_0x38c9ee(0xfc)](_0x38c9ee(0x10e)),modal=document['querySelector']('.termModal'),buttonCloseModal=document[_0x38c9ee(0xfc)]('#closeModal');buttonShowModal[_0x38c9ee(0x102)]('click',()=>{const _0x3b93b9=_0x38c9ee;modal[_0x3b93b9(0x10a)][_0x3b93b9(0x10b)](_0x3b93b9(0x100));}),buttonCloseModal['addEventListener'](_0x38c9ee(0x118),()=>{const _0x3c0f7f=_0x38c9ee;modal[_0x3c0f7f(0x10a)]['toggle'](_0x3c0f7f(0x100));});
+const formFreeInternet = document.querySelector('.formFreeInternet');
+const interestOptions = document.querySelector('.interestOptions')
+
+const cliente = {}
+
+interestOptions.addEventListener('click', () => {
+    const checkboxes = interestOptions.querySelectorAll('input[type="checkbox"]');
+    const checkedCheckboxes = interestOptions.querySelectorAll('input[type="checkbox"]:checked');
+    if (checkedCheckboxes.length === 3) {
+        // Desactivar los checkboxes no seleccionados
+        checkboxes.forEach((checkbox) => {
+            if (!checkbox.checked) {
+                checkbox.disabled = true;
+            }
+        });
+    } else {
+        // Volver a activar todas las opciones
+        checkboxes.forEach((checkbox) => {
+            checkbox.disabled = false;
+        });
+    }
+    cliente.interest = Array.from(checkedCheckboxes).map((checkbox) => checkbox.value);
+    console.log('datos: ', cliente.interest);
+});
+formFreeInternet.addEventListener('submit', (e) => {
+    e.preventDefault()
+    const dist = document.getElementById('dist').value;
+    const prov = document.getElementById('prov').value;
+    const dept = document.getElementById('dept').value;
+
+    const datosFormulario = new FormData(formFreeInternet)
+    const datosCliente = {
+        name: datosFormulario.get('nombreApellido'),
+        dni: datosFormulario.get('dni'),
+        phone: datosFormulario.get('phone'),
+        email: datosFormulario.get('email'),
+        address: datosFormulario.get('inaddress'),
+        region: dept,
+        state: prov,
+        district: dist,
+        interest: cliente.interest,
+        authorization: datosFormulario.get('chkTerminos') === 'true',
+    }
+    // const options = {
+    //     method: 'POST',
+    //     headers: {
+    //         'Accept': 'application/json',
+    //         'Content-Type': 'application/json',
+    //     },
+    //     body: JSON.stringify(datosCliente),
+    // };
+
+    // fetch('http://18.228.213.201:3000/api/customers', options)
+    //     .then(function (response) {
+    //         console.log('successfully');
+    //     })
+    //     .catch(function (error) {
+    //         console.error('Error:', error);
+    //     });
+
+    document.body.style.overflow = 'hidden'
+    console.log(datosCliente);
+    const urlRedirect = `${document.querySelector('.ingresarFree').getAttribute('url')}&data=${JSON.stringify(datosCliente)}`
+    // location.href = urlRedirect
+})
+
+const buttonShowModal = document.querySelector('#showModal');
+const modal = document.querySelector('.termModal')
+const buttonCloseModal = document.querySelector('#closeModal')
+
+buttonShowModal.addEventListener('click', () => {
+    modal.classList.toggle('inv')
+})
+buttonCloseModal.addEventListener('click', () => {
+    modal.classList.toggle('inv')
+})

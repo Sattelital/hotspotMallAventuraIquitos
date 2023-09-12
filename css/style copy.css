@@ -2,32 +2,26 @@
   font-family: MontHeavy;
   src: url("../resources/fonts/Mont-Heavy.otf");
 }
-
 @font-face {
   font-family: MontBold;
   src: url("../resources/fonts/Mont-Bold.otf");
 }
-
 @font-face {
   font-family: MontSemiBold;
   src: url("../resources/fonts/Mont-SemiBold.otf");
 }
-
 @font-face {
   font-family: MontRegular;
   src: url("../resources/fonts/Mont-Regular.otf");
 }
-
 @font-face {
   font-family: MontBook;
   src: url("../resources/fonts/Mont-Book.otf");
 }
-
 @font-face {
   font-family: MontLight;
   src: url("../resources/fonts/Mont-Light.otf");
 }
-
 .inv {
   display: none !important;
 }
@@ -44,19 +38,16 @@
 html {
   font-size: 10px;
 }
-
 @media only screen and (max-width: 54em) {
   html {
     font-size: 9px;
   }
 }
-
 @media only screen and (max-width: 48em) {
   html {
     font-size: 8px;
   }
 }
-
 @media only screen and (max-width: 30em) {
   html {
     font-size: 9px;
@@ -107,7 +98,6 @@ main {
   align-items: center;
   z-index: 10;
 }
-
 .loaderContainer .loader {
   border: 16px solid #f3f3f3;
   border-top: 16px solid #0075FF;
@@ -117,7 +107,6 @@ main {
   animation: spin 2s linear infinite;
   top: 50%;
 }
-
 .loaderContainer img {
   position: absolute;
 }
@@ -138,7 +127,6 @@ main {
   font-size: 1.3rem;
   line-height: 2rem;
 }
-
 .termModal button {
   margin: 1rem 0;
   background-color: rgba(0, 117, 255, 0.9);
@@ -150,14 +138,12 @@ main {
   border-radius: 0.5rem;
   cursor: pointer;
 }
-
 .termModal p {
   width: 100%;
   height: 100%;
   overflow: auto;
   text-align: justify;
 }
-
 .termModal p b {
   text-align: justify;
 }
@@ -166,12 +152,10 @@ main {
   0% {
     transform: rotate(0deg);
   }
-
   100% {
     transform: rotate(360deg);
   }
 }
-
 .container {
   display: flex;
   justify-content: center;
@@ -179,13 +163,11 @@ main {
   width: 100%;
   max-width: 140rem;
 }
-
 .container .structure {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 @media only screen and (max-width: 30em) {
   .container .structure {
     flex-direction: column;
@@ -201,19 +183,16 @@ main {
   align-items: center;
   gap: 4rem;
 }
-
 @media only screen and (max-width: 54em) {
   .info {
     width: 60%;
   }
 }
-
 @media only screen and (max-width: 30em) {
   .info {
     width: 90%;
   }
 }
-
 .info .logoContainer {
   width: 100%;
   display: flex;
@@ -221,65 +200,53 @@ main {
   align-items: center;
   gap: 3rem;
 }
-
 .info .logoContainer img {
-  width: 21rem;
+  width: 23rem;
   object-fit: contain;
 }
-
 @media only screen and (max-width: 75em) {
   .info .logoContainer img {
-    width: 18rem;
+    width: 20rem;
   }
 }
-
 @media only screen and (max-width: 54em) {
   .info .logoContainer img {
-    width: 13rem;
+    width: 15rem;
   }
 }
-
 @media only screen and (max-width: 30em) {
   .info .logoContainer img {
-    width: 35%;
+    width: 40%;
   }
 }
-
 .info .logoContainer span {
-  font-size: 2.8rem;
+  font-size: 3rem;
   color: #fff;
-  ;
   font-family: "MontSemiBold", sans-serif;
 }
-
 @media only screen and (max-width: 54em) {
   .info .logoContainer span {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
   }
 }
-
 .info .text {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  ;
 }
-
 .info .text p {
-  font-size: 2.4rem;
+  font-size: 2.6rem;
   font-family: "MontSemiBold", sans-serif;
   color: #fff;
   text-align: center;
 }
-
 @media only screen and (max-width: 54em) {
   .info .text p {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 }
-
 .info .text p span {
   font-family: "MontBold", sans-serif;
 }
@@ -293,54 +260,46 @@ main {
   border-left: 3px solid #fff;
   padding: 3rem;
 }
-
 @media only screen and (max-width: 54em) {
   .forms {
     width: 40%;
   }
 }
-
 @media only screen and (max-width: 30em) {
   .forms {
     width: 90%;
     border-left: none;
   }
 }
-
 .forms .freeInternetContainer {
   display: flex;
   flex-direction: column;
   gap: 3rem;
 }
-
 .forms .freeInternetContainer .header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
 .forms .freeInternetContainer .header h3 {
   text-align: center;
   font-size: 2rem;
   font-family: "MontHeavy", sans-serif;
   color: #fff;
 }
-
 .forms .freeInternetContainer .formFreeInternet {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1.5rem;
+  gap: 2rem;
 }
-
 .forms .freeInternetContainer .formFreeInternet label {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-
 .forms .freeInternetContainer .formFreeInternet label input {
   width: 80%;
   border: none;
@@ -352,98 +311,14 @@ main {
   font-family: "MontSemiBold", sans-serif;
   font-size: 1.3rem;
 }
-
 @media only screen and (max-width: 75em) {
   .forms .freeInternetContainer .formFreeInternet label input {
     width: 100%;
   }
 }
-
 .forms .freeInternetContainer .formFreeInternet label input::placeholder {
   color: #0075FF;
 }
-
-.forms .freeInternetContainer .formFreeInternet #address {
-  /* background-color: red; */
-  display: flex;
-  /* flex-direction: column; */
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: .3rem;
-}
-
-.forms .freeInternetContainer .formFreeInternet #address select {
-  width: 26%;
-  padding: .4rem .2rem;
-  color: #0075FF;
-  -webkit-text-fill-color: #0075FF;
-  outline: none;
-  border-radius: 0.5rem;
-  font-family: "MontSemiBold", sans-serif;
-  font-size: 1.1rem;
-  background-color: #fff;
-}
-
-@media only screen and (max-width: 75em) {
-  .forms .freeInternetContainer .formFreeInternet #address select {
-    width: 32.6%;
-    font-size: 1rem;
-  }
-}
-
-.forms .freeInternetContainer .formFreeInternet #interest {
-  border: 1px solid #fff;
-  border-radius: 1rem;
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-family: "MontSemiBold", sans-serif;
-  overflow: hidden;
-}
-
-@media only screen and (max-width: 75em) {
-  .forms .freeInternetContainer .formFreeInternet #interest {
-    width: 100%;
-  }
-}
-
-.forms .freeInternetContainer .formFreeInternet #interest>p {
-  background-color: #fff;
-  color: #0075FF;
-  width: 100%;
-  text-align: center;
-  font-size: 1.1rem;
-}
-.forms .freeInternetContainer .formFreeInternet #interest>p span{
-  /* background-color: red; */
-  font-size: 1rem;
-  opacity: .7;
-}
-
-.forms .freeInternetContainer .formFreeInternet #interest .interestOptions {
-  /* background-color: green; */
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.forms .freeInternetContainer .formFreeInternet #interest .interestOptions label {
-  /* background-color: green; */
-  margin: 0 .2rem;
-  padding: .4rem .5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "MontBook", sans-serif;
-  gap: .5rem;
-  width: auto;
-}
-
 .forms .freeInternetContainer .formFreeInternet #chkTerminos {
   width: 80%;
   font-size: 1rem;
@@ -457,23 +332,19 @@ main {
   user-select: none;
   cursor: pointer;
 }
-
 @media only screen and (max-width: 75em) {
   .forms .freeInternetContainer .formFreeInternet #chkTerminos {
     width: 100%;
   }
 }
-
 .forms .freeInternetContainer .formFreeInternet #chkTerminos #cbox1 {
   align-self: flex-start;
   width: auto;
 }
-
 .forms .freeInternetContainer .formFreeInternet #chkTerminos span {
   font-weight: 900;
   font-family: "MontSemiBold", sans-serif;
 }
-
 .forms .freeInternetContainer .formFreeInternet .buttons {
   display: flex;
   justify-content: center;
@@ -481,7 +352,6 @@ main {
   width: 100%;
   gap: 1rem;
 }
-
 .forms .freeInternetContainer .formFreeInternet .buttons a,
 .forms .freeInternetContainer .formFreeInternet .buttons button {
   color: #0075FF;
@@ -498,23 +368,18 @@ main {
   justify-content: center;
   align-items: center;
 }
-
 @media only screen and (max-width: 75em) {
-
   .forms .freeInternetContainer .formFreeInternet .buttons a,
   .forms .freeInternetContainer .formFreeInternet .buttons button {
     width: 100%;
   }
 }
-
 .forms .freeInternetContainer .formFreeInternet .buttons a {
   background-color: #0075FF;
 }
-
 .forms .freeInternetContainer .formFreeInternet .buttons button {
   background-color: #33EAD1;
 }
-
 .forms .freeInternetContainer .formFreeInternet .buttons #back {
   background-color: red;
 }

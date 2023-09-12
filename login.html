@@ -281,15 +281,64 @@
                             <label for="phone">
                                 <input type="tel" name="phone" id="phone" placeholder="Celular" required>
                             </label>
+                            <label id="address" for="dir">
+                                <label for="inaddress">
+                                    <input id="inaddress" type="text" name="inaddress" placeholder="Dirección" required>
+                                </label>
+                                <select id="dept" name="dept" required>
+                                    <option value="default" disabled>Departamento</option>
+                                </select>
+                                <select id="prov" name="prov" required>
+                                    <option value="" disabled>Provincia</option>
+                                </select>
+                                <select id="dist" name="dist" required>
+                                    <option value="" disabled>Distrito</option>
+                                </select>
+                            </label>
+                            <label for="interest" id="interest">
+                                <p>
+                                    Selecciona tus intereses: <span>(Máximo 3)</span>
+                                </p>
+                                <div class="interestOptions" required>
+                                    <label for="deporte">
+                                        <input type="checkbox" name="deporte" id="deporte" value="deporte">
+                                        <p>Deporte</p>
+                                    </label>
+                                    <label for="moda">
+                                        <input type="checkbox" name="moda" id="moda" value="moda">
+                                        <p>Moda</p>
+                                    </label>
+                                    <label for="tecnologia">
+                                        <input type="checkbox" name="tecnologia" id="tecnologia" value="tecnologia">
+                                        <p>Tecnología</p>
+                                    </label>
+                                    <label for="gastronomia">
+                                        <input type="checkbox" name="gastronomia" id="gastronomia" value="gastronomia">
+                                        <p>Gastronomía</p>
+                                    </label>
+                                    <label for="entretenimiento">
+                                        <input type="checkbox" name="entretenimiento" id="entretenimiento"
+                                            value="entretenimiento">
+                                        <p>Entretenimiento</p>
+                                    </label>
+                                    <label for="infantil">
+                                        <input type="checkbox" name="infantil" id="infantil" value="infantil">
+                                        <p>Infantil</p>
+                                    </label>
+                                    <label for="otro">
+                                        <input type="checkbox" name="otro" id="otro" value="otro">
+                                        <p>Otro</p>
+                                    </label>
+                                </div>
+                            </label>
                             <label id="chkTerminos">
-                                <input type="checkbox" id="cbox1" name="chkTerminos" value="" required>
+                                <input type="checkbox" id="cbox1" name="chkTerminos" value="true" required>
                                 <p>
                                     He leído y acepto los <span id="showModal">Términos de Uso y Política de
                                         Privacidad</span>. Autorizo el tratamiento de mis datos para recibir
                                     promociones, ofertas y noticias exclusivas de GLOBAL y Mall Aventura.
                                 </p>
                             </label>
-
                             <div class="buttons">
                                 <button class="ingresarFree"
                                     url="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)"
@@ -306,6 +355,8 @@
     </main>
     <script src="./js/loader.js"></script>
     <script src="./js/functions.js"></script>
+    <script src="./js/ubication/ubication.js"></script>
+
 </body>
 
 </html>
